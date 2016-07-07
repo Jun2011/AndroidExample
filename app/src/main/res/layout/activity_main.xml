@@ -29,9 +29,16 @@
         android:textAllCaps="false"/>
 
     <Button
-        android:id="@+id/btn_pull_1"
+        android:id="@+id/btn_pull_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="使用Pull方式解析Xml数据"
+        android:text="使用Pull方式解析XML数据"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_sax_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用SAX方式解析XML数据"
         android:textAllCaps="false"/>
 </LinearLayout>

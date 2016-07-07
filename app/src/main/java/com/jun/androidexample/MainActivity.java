@@ -6,7 +6,8 @@ import android.view.View;
 
 import com.jun.androidexample.gson.GsonActivity;
 import com.jun.androidexample.parcelable.Parcelable_1;
-import com.jun.androidexample.pull.Pull_1;
+import com.jun.androidexample.pull.PullActivity;
+import com.jun.androidexample.sax.SaxActivity;
 import com.jun.androidexample.serializable.Serializable_1;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,11 +46,19 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        findViewById(R.id.btn_pull_1).setOnClickListener(
+        findViewById(R.id.btn_pull_activity).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Pull_1.launch(MainActivity.this);
+                        PullActivity.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_sax_activity).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        SaxActivity.launch(MainActivity.this);
                     }
                 });
     }

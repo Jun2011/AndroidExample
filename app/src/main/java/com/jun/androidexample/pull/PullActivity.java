@@ -19,9 +19,9 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 
 /**
- * Created by Jun on 2016/7/7.
+ * 使用Pull方式解析XML数据
  */
-public class Pull_1 extends AppCompatActivity {
+public class PullActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +96,7 @@ public class Pull_1 extends AppCompatActivity {
 
     // 启动当前Activity
     public static void launch(Context context) {
-        Intent intent = new Intent(context, Pull_1.class);
+        Intent intent = new Intent(context, PullActivity.class);
         context.startActivity(intent);
     }
 }
