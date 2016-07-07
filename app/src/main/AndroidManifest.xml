@@ -20,6 +20,8 @@
         <activity android:name=".gson.Gson_2"/>
         <activity android:name=".gson.Gson_3"/>
         <activity android:name=".gson.Gson_4"/>
+        <activity android:name=".parcelable.Parcelable_1"/>
+        <activity android:name=".parcelable.Parcelable_2"/>
     </application>
 
 </manifest>

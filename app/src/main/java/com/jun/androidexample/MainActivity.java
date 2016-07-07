@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jun.androidexample.gson.GsonActivity;
+import com.jun.androidexample.parcelable.Parcelable_1;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 GsonActivity.launch(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.btn_parcelable_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Parcelable_1.launch(MainActivity.this);
             }
         });
     }
