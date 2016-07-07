@@ -24,6 +24,7 @@
         <activity android:name=".parcelable.Parcelable_2"/>
         <activity android:name=".serializable.Serializable_1"/>
         <activity android:name=".serializable.Serializable_2"/>
+        <activity android:name=".pull.Pull_1"/>
     </application>
 
 </manifest>

@@ -1,6 +1,4 @@
-package com.jun.androidexample.model;
-
-import com.jun.androidexample.model.NewslistBean;
+package com.jun.androidexample.gson;
 
 import java.util.List;
 

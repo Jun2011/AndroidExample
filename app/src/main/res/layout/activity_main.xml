@@ -18,7 +18,7 @@
         android:id="@+id/btn_parcelable_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Parcelable序列化对象"
+        android:text="Parcelable可打包的对象"
         android:textAllCaps="false"/>
 
     <Button
@@ -26,5 +26,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Serializable序列化对象"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_pull_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="使用Pull方式解析Xml数据"
         android:textAllCaps="false"/>
 </LinearLayout>

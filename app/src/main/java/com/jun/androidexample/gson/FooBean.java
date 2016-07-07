@@ -1,4 +1,4 @@
-package com.jun.androidexample.model;
+package com.jun.androidexample.gson;
 
 import java.util.Date;
 

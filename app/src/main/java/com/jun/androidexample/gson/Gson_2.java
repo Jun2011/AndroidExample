@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.jun.androidexample.model.FooBean;
 import com.orhanobut.logger.Logger;
 
 import java.io.BufferedReader;
