@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidExample</string>
+    <string name="gson">使用Gson解析Json数据</string>
+</resources>
