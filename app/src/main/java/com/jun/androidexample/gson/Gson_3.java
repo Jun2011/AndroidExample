@@ -8,43 +8,30 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.orhanobut.logger.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Date;
 
 /**
- * 将Json数据解析成实体含Date类型
+ * Created by Jun on 2016/7/7.
  */
-public class Gson_2 extends AppCompatActivity {
-
+public class Gson_3 extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // 获取Json数据
-        String jsonData = getJsonData("JsonData_2");
+        String jsonData = getJsonData("JsonData_3");
 
         // 解析Json数据
-        GsonBuilder builder = new GsonBuilder();
-        builder.setDateFormat("yyyy-MM-dd HH:mm:ss");
-        Gson gson = builder.create();
-        FooBean fooBean = gson.fromJson(jsonData, FooBean.class);
-
-        Date date = fooBean.getCreated_at();
-        String created_at = date.toString();
+        NewsBean newsBean = new Gson().fromJson(jsonData, NewsBean.class);
 
         // 通过Log展示解析的结果
-        Logger.i("id: " + fooBean.getId()
+        Logger.i("ctime: " + newsBean.getNewslist().get(0).getCtime()
                 + "\n"
-                + "body: " + fooBean.getBody()
-                + "\n"
-                + "number: " + fooBean.getNumber()
-                + "\n"
-                + "created_at: " + created_at);
+                + "title: " + newsBean.getNewslist().get(0).getTitle());
     }
 
     // 根据Json文件获取数据
@@ -68,7 +55,7 @@ public class Gson_2 extends AppCompatActivity {
 
     // 启动当前Activity
     public static void launch(Context context) {
-        Intent intent = new Intent(context, Gson_2.class);
+        Intent intent = new Intent(context, Gson_3.class);
         context.startActivity(intent);
     }
 }

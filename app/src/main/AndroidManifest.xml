@@ -18,6 +18,8 @@
         <activity android:name=".gson.GsonActivity"/>
         <activity android:name=".gson.Gson_1"/>
         <activity android:name=".gson.Gson_2"/>
+        <activity android:name=".gson.Gson_3"/>
+        <activity android:name=".gson.Gson_4"/>
     </application>
 
 </manifest>

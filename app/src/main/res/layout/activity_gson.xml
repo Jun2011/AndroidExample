@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
     <Button
         android:id="@+id/btn_gson_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gson_1"
+        android:text="GsonExample_1"
         android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/btn_gson_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gson_2"
+        android:text="GsonExample_2"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_gson_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GsonExample_3"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_gson_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GsonExample_4"
         android:textAllCaps="false"/>
 </LinearLayout>

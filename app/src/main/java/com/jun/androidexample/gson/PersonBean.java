@@ -3,7 +3,7 @@ package com.jun.androidexample.gson;
 /**
  * Created by Jun on 2016/7/7.
  */
-public class Person {
+public class PersonBean {
 
     /**
      * name : Tom

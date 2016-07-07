@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by Jun on 2016/7/7.
  */
-public class Foo {
+public class FooBean {
     /**
      * id : 100
      * body : It is my post

@@ -39,6 +39,22 @@ public class GsonActivity extends AppCompatActivity {
                         Gson_2.launch(GsonActivity.this);
                     }
                 });
+
+        findViewById(R.id.btn_gson_3)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Gson_3.launch(GsonActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_gson_4)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Gson_4.launch(GsonActivity.this);
+                    }
+                });
     }
 
     // 启动当前Activity

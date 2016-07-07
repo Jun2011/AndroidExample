@@ -28,12 +28,12 @@ public class Gson_1 extends AppCompatActivity {
 
         // 解析简单的Json数据
         Gson gson = new Gson();
-        Person person = gson.fromJson(jsonData, Person.class);
+        PersonBean personBean = gson.fromJson(jsonData, PersonBean.class);
 
         // 通过Log展示解析的结果
-        Logger.i("name: " + person.getName()
+        Logger.i("name: " + personBean.getName()
                 + "\n"
-                + "age: " + person.getAge());
+                + "age: " + personBean.getAge());
     }
 
     // 根据Json文件获取数据
