@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".gson.SimpleJsonDataActivity"/>
+        <activity android:name=".gson.GsonActivity"/>
+        <activity android:name=".gson.Gson_1"/>
+        <activity android:name=".gson.Gson_2"/>
     </application>
 
 </manifest>

@@ -1,10 +1,10 @@
 package com.jun.androidexample;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jun.androidexample.gson.SimpleJsonDataActivity;
+import com.jun.androidexample.gson.GsonActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_gson).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleJsonDataActivity.launch(MainActivity.this);
+                GsonActivity.launch(MainActivity.this);
             }
         });
     }

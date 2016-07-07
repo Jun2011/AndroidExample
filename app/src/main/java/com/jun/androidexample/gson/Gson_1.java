@@ -17,14 +17,14 @@ import java.io.InputStreamReader;
 /**
  * 解析简单数据
  */
-public class SimpleJsonDataActivity extends AppCompatActivity {
+public class Gson_1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // 获取Json数据
-        String jsonData = getJsonData("SimpleJsonData.json");
+        String jsonData = getJsonData("JsonData_1.json");
 
         // 解析简单的Json数据
         Gson gson = new Gson();
@@ -57,7 +57,7 @@ public class SimpleJsonDataActivity extends AppCompatActivity {
 
     // 启动当前Activity
     public static void launch(Context context) {
-        Intent intent = new Intent(context, SimpleJsonDataActivity.class);
+        Intent intent = new Intent(context, Gson_1.class);
         context.startActivity(intent);
     }
 }
