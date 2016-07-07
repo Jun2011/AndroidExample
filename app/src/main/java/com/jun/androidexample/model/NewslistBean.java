@@ -1,4 +1,4 @@
-package com.jun.androidexample.gson;
+package com.jun.androidexample.model;
 
 /**
  * Created by Jun on 2016/7/7.

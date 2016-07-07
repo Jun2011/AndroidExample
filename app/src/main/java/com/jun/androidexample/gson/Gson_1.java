@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+import com.jun.androidexample.model.PersonBean;
 import com.orhanobut.logger.Logger;
 
 import java.io.BufferedReader;

@@ -1,4 +1,4 @@
-package com.jun.androidexample.parcelable;
+package com.jun.androidexample.serializable;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,29 +12,29 @@ import com.jun.androidexample.R;
 /**
  * Created by Jun on 2016/7/7.
  */
-public class Parcelable_1 extends AppCompatActivity {
+public class Serializable_1 extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.parcelable_1);
+        setContentView(R.layout.serializable_1);
 
-        findViewById(R.id.btn_parcelable_2)
+        findViewById(R.id.btn_serializable_2)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                        Student student = new Student();
-                        student.setName("Tom");
-                        student.setAge(18);
+                        Person person = new Person();
+                        person.setName("Tom");
+                        person.setAge(18);
 
-                        Parcelable_2.launch(Parcelable_1.this, student);
+                        Serializable_2.launch(Serializable_1.this, person);
                     }
                 });
     }
 
     // 启动当前Activity
     public static void launch(Context context) {
-        Intent intent = new Intent(context, Parcelable_1.class);
+        Intent intent = new Intent(context, Serializable_1.class);
         context.startActivity(intent);
     }
 }
