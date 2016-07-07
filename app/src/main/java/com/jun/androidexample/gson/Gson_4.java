@@ -8,11 +8,15 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.orhanobut.logger.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jun on 2016/7/7.
@@ -26,11 +30,31 @@ public class Gson_4 extends AppCompatActivity {
         String jsonData = getJsonData("JsonData_4");
 
         // 解析Json数据
+        // 1、解析成Array数组
         NewslistBean[] newslistBeans = new Gson().fromJson(jsonData, NewslistBean[].class);
 
-        // 通过Log展示解析的结果
+        /**
+         * // Array数组转换成List列表
+         * List<NewslistBean> newslistBeanList = Arrays.asList(newslistBeans);
+         */
+
+        // 通过Log展示解析结果
         for (NewslistBean newslistBean :
                 newslistBeans) {
+            Logger.i("ctime: " + newslistBean.getCtime()
+                    + "\n"
+                    + "title: " + newslistBean.getTitle());
+        }
+
+        // 2、解析成List列表
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<NewslistBean>>() {
+        }.getType();
+        List<NewslistBean> newslistBeanList = gson.fromJson(jsonData, listType);
+
+        // 通过Log展示解析结果
+        for (NewslistBean newslistBean :
+                newslistBeanList) {
             Logger.i("ctime: " + newslistBean.getCtime()
                     + "\n"
                     + "title: " + newslistBean.getTitle());
