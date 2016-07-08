@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.jun.androidexample.gson.GsonActivity;
+import com.jun.androidexample.parcelable.Parcelable_1;
+import com.jun.androidexample.pull.PullActivity;
+import com.jun.androidexample.sax.SaxActivity;
+import com.jun.androidexample.serializable.Serializable_1;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,11 +22,44 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
 
-        findViewById(R.id.btn_gson).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GsonActivity.launch(MainActivity.this);
-            }
-        });
+        findViewById(R.id.btn_gson).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        GsonActivity.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_parcelable_1).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Parcelable_1.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_serializable_1).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Serializable_1.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_pull_activity).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        PullActivity.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_sax_activity).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        SaxActivity.launch(MainActivity.this);
+                    }
+                });
     }
 }
