@@ -7,7 +7,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
- * 使用SAX方式解析XML数据
+ * ContentHander
  */
 public class ContentHander extends DefaultHandler {
 

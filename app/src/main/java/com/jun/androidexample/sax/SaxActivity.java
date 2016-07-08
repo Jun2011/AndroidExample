@@ -20,7 +20,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParserFactory;
 
 /**
- * Created by Jun on 2016/7/7.
+ * 使用SAX方式解析XML数据
  */
 public class SaxActivity extends AppCompatActivity {
     @Override
