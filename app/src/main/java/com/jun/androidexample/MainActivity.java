@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jun.androidexample.customview.CustomTitleViewActivity;
 import com.jun.androidexample.gson.GsonActivity;
 import com.jun.androidexample.parcelable.Parcelable_1;
 import com.jun.androidexample.pull.PullActivity;
@@ -59,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         SaxActivity.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_custom_title_view_activity).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        CustomTitleViewActivity.launch(MainActivity.this);
                     }
                 });
     }

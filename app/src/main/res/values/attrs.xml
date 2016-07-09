@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // CustomTitleView的自定义属性
+    <attr name="customTitleText" format="string"/>
+    <attr name="customTitleTextSize" format="dimension"/>
+    <attr name="customTitleTextColor" format="color"/>
+    <declare-styleable name="CustomTitleView">
+        <attr name="customTitleText"/>
+        <attr name="customTitleTextSize"/>
+        <attr name="customTitleTextColor"/>
+    </declare-styleable>
+</resources>

@@ -26,6 +26,7 @@
         <activity android:name=".serializable.Serializable_2"/>
         <activity android:name=".pull.PullActivity"/>
         <activity android:name=".sax.SaxActivity"/>
+        <activity android:name=".customview.CustomTitleViewActivity"/>
     </application>
 
 </manifest>

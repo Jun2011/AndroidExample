@@ -41,4 +41,11 @@
         android:layout_height="wrap_content"
         android:text="使用SAX方式解析XML数据"
         android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/btn_custom_title_view_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义View"
+        android:textAllCaps="false"/>
 </LinearLayout>
