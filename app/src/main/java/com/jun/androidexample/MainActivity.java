@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jun.androidexample.customview.CustomTitleViewActivity;
+import com.jun.androidexample.customview.CustomViewActivity;
+import com.jun.androidexample.customviewgroup.CustomViewGroupActivity;
 import com.jun.androidexample.gson.GsonActivity;
 import com.jun.androidexample.parcelable.Parcelable_1;
 import com.jun.androidexample.pull.PullActivity;
@@ -63,11 +64,19 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        findViewById(R.id.btn_custom_title_view_activity).setOnClickListener(
+        findViewById(R.id.btn_custom_view_activity).setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        CustomTitleViewActivity.launch(MainActivity.this);
+                        CustomViewActivity.launch(MainActivity.this);
+                    }
+                });
+
+        findViewById(R.id.btn_custom_view_group_activity).setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        CustomViewGroupActivity.launch(MainActivity.this);
                     }
                 });
     }
