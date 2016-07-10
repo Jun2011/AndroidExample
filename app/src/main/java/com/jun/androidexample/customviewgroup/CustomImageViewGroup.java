@@ -25,6 +25,7 @@ public class CustomImageViewGroup extends ViewGroup {
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
 
+        // 直接使用系统提供的MarginLayoutParams
         return new MarginLayoutParams(getContext(), attrs);
     }
 
@@ -90,17 +91,17 @@ public class CustomImageViewGroup extends ViewGroup {
             if (i == 1 || i == 3) {
                 rHeight += cHeight + cParams.topMargin + cParams.bottomMargin;
             }
-
-            // 最大宽度
-            width = Math.max(tWidth, bWidth);
-            // 最大高度
-            height = Math.max(lHeight, rHeight);
-
-            // 如果是wrap_content设置为我们计算的值
-            // 否则：直接设置为父容器计算的值
-            setMeasuredDimension((widthMode == MeasureSpec.EXACTLY) ? sizeWidth : width,
-                    (heightMode == MeasureSpec.EXACTLY) ? sizeHeight : height);
         }
+
+        // 最大宽度
+        width = Math.max(tWidth, bWidth);
+        // 最大高度
+        height = Math.max(lHeight, rHeight);
+
+        // 如果是wrap_content设置为我们计算的值
+        // 否则：直接设置为父容器计算的值
+        setMeasuredDimension((widthMode == MeasureSpec.EXACTLY) ? sizeWidth : width,
+                (heightMode == MeasureSpec.EXACTLY) ? sizeHeight : height);
     }
 
     // 对其所有childView进行定位（设置childView的绘制区域）
