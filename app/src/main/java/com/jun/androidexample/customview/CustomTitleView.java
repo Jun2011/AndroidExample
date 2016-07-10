@@ -77,36 +77,54 @@ public class CustomTitleView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
+        // // 获取MeasureSpec的Mode和Size
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 
+        // 声明最终的值
         int width;
         int height;
 
-        // EXACTLY表示视图的宽度就是layout_width设置确切的值
-        // 或match_parent
+        // 如果MeasureSpec的Mode是EXACTLY则最终的值直接等于MeasureSpec的Size
         if (widthMode == MeasureSpec.EXACTLY) {
             width = widthSize;
-        } else {
+        } else { // 如果MeasureSpec的Mode是AT_MOST或UNSPECIFIED则需要测量其实际的值
             mPaint.setTextSize(mCustomTitleTextSize);
             mPaint.getTextBounds(mCustomTitleText, 0, mCustomTitleText.length(), mBound);
             float textWidth = mBound.width();
             int desired = (int) (getPaddingLeft() + textWidth + getPaddingRight());
-            width = desired;
+
+            if (widthMode == MeasureSpec.AT_MOST) {
+
+                // 如果MeasureSpec的Mode是AT_MOST则最大不能超过MeasureSpec的Size
+                // 所以最终的值等于MeasureSpec的Size和实际测量的值中的小的
+                width = Math.min(widthSize, desired);
+            } else {
+                // 如果MeasureSpec的Mode是UNSPECIFIED则最终的值直接等于实际测量的值
+                width = desired;
+            }
         }
 
-        // EXACTLY表示视图的宽度就是layout_height设置确切的值
-        // 或match_parent
+        // 如果MeasureSpec的Mode是EXACTLY则最终的值直接等于MeasureSpec的Size
         if (heightMode == MeasureSpec.EXACTLY) {
             height = heightSize;
-        } else {
+        } else { // 如果MeasureSpec的Mode是AT_MOST或UNSPECIFIED则需要测量其实际的值
             mPaint.setTextSize(mCustomTitleTextSize);
             mPaint.getTextBounds(mCustomTitleText, 0, mCustomTitleText.length(), mBound);
             float textHeight = mBound.height();
             int desired = (int) (getPaddingTop() + textHeight + getPaddingBottom());
-            height = desired;
+
+            if (heightMode == MeasureSpec.AT_MOST) {
+
+                // 如果MeasureSpec的Mode是AT_MOST则最大不能超过MeasureSpec的Size
+                // 所以最终的值等于MeasureSpec的Size和实际测量的值中的小的
+                height = Math.min(heightSize, desired);
+            } else {
+                // 如果MeasureSpec的Mode是UNSPECIFIED则最终的值直接等于实际测量的值
+                height = desired;
+            }
         }
 
         // 设置测量的宽高
