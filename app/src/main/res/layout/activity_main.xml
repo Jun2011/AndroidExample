@@ -1,58 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.jun.androidexample.MainActivity">
 
-    <Button
-        android:id="@+id/btn_gson"
+    <ListView
+        android:id="@+id/activity_list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="使用Gson解析Json数据"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_parcelable_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Parcelable可打包的对象"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_serializable_1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Serializable序列化对象"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_pull_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="使用Pull方式解析XML数据"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_sax_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="使用SAX方式解析XML数据"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_custom_view_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义View"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btn_custom_view_group_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义ViewGroup"
-        android:textAllCaps="false"/>
-</LinearLayout>
+        android:layout_height="match_parent"/>
+</FrameLayout>

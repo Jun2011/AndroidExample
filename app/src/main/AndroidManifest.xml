@@ -28,6 +28,8 @@
         <activity android:name=".sax.SaxActivity"/>
         <activity android:name=".customview.CustomViewActivity"/>
         <activity android:name=".customviewgroup.CustomViewGroupActivity"/>
+        <activity android:name=".qualifier.QualifierActivity"/>
+        <activity android:name=".qualifier.NewsContentActivity"/>
     </application>
 
 </manifest>
