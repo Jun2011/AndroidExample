@@ -98,7 +98,8 @@ public class NewsTitleFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         // 能找到news_content_layout就是双页否则就是单页
-        if (getActivity().findViewById(R.id.news_content_layout) != null) {
+        View view = getActivity().findViewById(R.id.news_content_layout);
+        if (view != null && view.getVisibility() == View.VISIBLE) {
             isTwoPane = true;
         } else {
             isTwoPane = false;
