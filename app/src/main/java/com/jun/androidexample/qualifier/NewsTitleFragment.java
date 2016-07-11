@@ -29,17 +29,17 @@ public class NewsTitleFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        // 初始化新闻数据
-        newsList = getNews();
+        // 初始化数据
+        initData();
 
         // 初始化Adapter
         newsTitleAdapter = new NewsTitleAdapter(context, R.layout.item_news_title, newsList);
     }
 
-    // 初始化新闻数据
-    private List<News> getNews() {
+    // 初始化数据
+    private void initData() {
 
-        List<News> newsList = new ArrayList<>();
+        newsList = new ArrayList<>();
 
         News news1 = new News();
         news1.setNewsTitle("Succeed in College as a Learning Disabled Student");
@@ -55,8 +55,6 @@ public class NewsTitleFragment extends Fragment {
                 "involved in the tech giant's Android phones, in a move seen as a coup\n" +
                 "for the rapidly growing Chinese smartphone maker.");
         newsList.add(news2);
-
-        return newsList;
     }
 
     @Nullable
@@ -81,14 +79,17 @@ public class NewsTitleFragment extends Fragment {
                     NewsContentFragment newsContentFragment =
                             (NewsContentFragment) getFragmentManager().
                                     findFragmentById(R.id.news_content_fragment);
+                    // 刷新NewsContentFragment数据
                     newsContentFragment.refresh(news.getNewsTitle(), news.getNewsContent());
                 } else { // 如果是单页就启动新闻内容页面Activity
+
                     NewsContentActivity.launch(getActivity(),
                             news.getNewsTitle(),
                             news.getNewsContent());
                 }
             }
         });
+
         return view;
     }
 

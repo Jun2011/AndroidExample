@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="12dp"
-            android:text="小事 · 单身整整三十五年"
+            android:text="点击新闻标题获取内容信息"
             android:textSize="20sp"/>
 
         <View

@@ -23,7 +23,9 @@ public class NewsContentFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
+        // 加载布局
         view = inflater.inflate(R.layout.fragment_news_content, container, false);
+
         return view;
     }
 
