@@ -30,6 +30,8 @@
         <activity android:name=".customviewgroup.CustomViewGroupActivity"/>
         <activity android:name=".qualifier.QualifierActivity"/>
         <activity android:name=".qualifier.NewsContentActivity"/>
+        <activity android:name=".percent.PercentActivity"/>
+        <activity android:name=".viewpager.ViewPagerActivity"/>
     </application>
 
 </manifest>

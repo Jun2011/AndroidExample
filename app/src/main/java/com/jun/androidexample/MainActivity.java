@@ -15,6 +15,7 @@ import com.jun.androidexample.pull.PullActivity;
 import com.jun.androidexample.qualifier.QualifierActivity;
 import com.jun.androidexample.sax.SaxActivity;
 import com.jun.androidexample.serializable.Serializable_1;
+import com.jun.androidexample.viewpager.ViewPagerActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("自定义View");
         activityList.add("自定义ViewGroup");
         activityList.add("屏幕适配之限定符");
+        activityList.add("ViewPager的使用");
     }
 
     private void initViews() {
@@ -96,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 7:
                 QualifierActivity.launch(MainActivity.this);
+                break;
+            case 8:
+                ViewPagerActivity.launch(MainActivity.this);
                 break;
         }
     }

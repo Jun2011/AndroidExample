@@ -29,4 +29,7 @@ dependencies {
 
     // Gson
     compile 'com.google.code.gson:gson:2.7'
+
+    // PercentSupportLibrary
+    compile 'com.android.support:percent:23.3.0'
 }
