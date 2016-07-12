@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by Jun on 2016/7/12.
+ * PagerAdapter
  */
 public class WithoutFragmentPagerAdapter extends PagerAdapter {
 
