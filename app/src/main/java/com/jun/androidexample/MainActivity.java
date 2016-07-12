@@ -7,6 +7,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.jun.androidexample.bannerview.BannerViewActivity;
 import com.jun.androidexample.customview.CustomViewActivity;
 import com.jun.androidexample.customviewgroup.CustomViewGroupActivity;
 import com.jun.androidexample.gson.GsonActivity;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("自定义ViewGroup");
         activityList.add("屏幕适配之限定符");
         activityList.add("ViewPager的使用");
+        activityList.add("自定义BannerView图片轮播");
     }
 
     private void initViews() {
@@ -101,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 8:
                 ViewPagerActivity.launch(MainActivity.this);
+                break;
+            case 9:
+                BannerViewActivity.launch(MainActivity.this);
                 break;
         }
     }
