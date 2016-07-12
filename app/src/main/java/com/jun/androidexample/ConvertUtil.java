@@ -1,4 +1,4 @@
-package com.jun.androidexample.bannerview;
+package com.jun.androidexample;
 
 import android.content.Context;
 

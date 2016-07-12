@@ -1,14 +1,9 @@
 package com.jun.androidexample.bannerview;
 
-import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-import com.jun.androidexample.R;
 
 import java.util.List;
 
@@ -17,19 +12,17 @@ import java.util.List;
  */
 class ViewPagerAdapter extends PagerAdapter {
 
-    private Context context;
-    private List<String> imageUrlList;
+    private List<ImageView> imageViewList;
 
-    public ViewPagerAdapter(Context context, List<String> imageUrlList) {
+    public ViewPagerAdapter(List<ImageView> imageViewList) {
 
-        this.context = context;
-        this.imageUrlList = imageUrlList;
+        this.imageViewList = imageViewList;
     }
 
     @Override
     public int getCount() {
 
-        return imageUrlList.size();
+        return imageViewList.size();
     }
 
     @Override
@@ -41,12 +34,8 @@ class ViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.item_banner_page, null);
-        ImageView imageView = (ImageView) view.findViewById(R.id.banner_image_view);
-        Glide.with(context).load(imageUrlList.get(position)).into(imageView);
-
-        container.addView(view);
-        return view;
+        container.addView(imageViewList.get(position));
+        return imageViewList.get(position);
     }
 
     @Override
