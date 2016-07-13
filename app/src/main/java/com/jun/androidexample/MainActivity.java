@@ -11,6 +11,7 @@ import com.jun.androidexample.bannerview.BannerViewActivity;
 import com.jun.androidexample.customview.CustomViewActivity;
 import com.jun.androidexample.customviewgroup.CustomViewGroupActivity;
 import com.jun.androidexample.gson.GsonActivity;
+import com.jun.androidexample.imageslider.ImageSliderActivity;
 import com.jun.androidexample.parcelable.Parcelable_1;
 import com.jun.androidexample.pull.PullActivity;
 import com.jun.androidexample.qualifier.QualifierActivity;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("屏幕适配之限定符");
         activityList.add("ViewPager的使用");
         activityList.add("自定义BannerView图片轮播");
+        activityList.add("使用AndroidImageSlider");
     }
 
     private void initViews() {
@@ -106,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 9:
                 BannerViewActivity.launch(MainActivity.this);
+                break;
+            case 10:
+                ImageSliderActivity.launch(MainActivity.this);
                 break;
         }
     }

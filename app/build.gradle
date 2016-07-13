@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'android-apt'
+
 android {
     compileSdkVersion 23
     buildToolsVersion "24.0.0"
@@ -36,4 +38,14 @@ dependencies {
     // Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.android.support:support-v4:23.4.0'
+
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+
+    // AndroidImageSlider
+    compile "com.android.support:support-v4:+"
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
 }

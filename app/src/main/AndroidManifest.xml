@@ -3,6 +3,7 @@
           package="com.jun.androidexample">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +36,7 @@
         <activity android:name=".percent.PercentActivity"/>
         <activity android:name=".viewpager.ViewPagerActivity"/>
         <activity android:name=".bannerview.BannerViewActivity"/>
+        <activity android:name=".imageslider.ImageSliderActivity"/>
     </application>
 
 </manifest>

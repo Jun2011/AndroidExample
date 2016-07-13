@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
 
 import com.jun.androidexample.R;
 
@@ -29,6 +30,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     @Override
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager);
 
