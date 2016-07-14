@@ -7,6 +7,7 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.jun.androidexample.FloatingActionButton.FloatingActionButtonActivity;
 import com.jun.androidexample.bannerview.BannerViewActivity;
 import com.jun.androidexample.customview.CustomViewActivity;
 import com.jun.androidexample.customviewgroup.CustomViewGroupActivity;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("自定义BannerView图片轮播");
         activityList.add("使用AndroidImageSlider");
         activityList.add("使用RecyclerView");
+        activityList.add("使用FloatingActionButton");
     }
 
     private void initViews() {
@@ -116,6 +118,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 11:
                 RecyclerViewActivity.launch(MainActivity.this);
+                break;
+            case 12:
+                FloatingActionButtonActivity.launch(MainActivity.this);
                 break;
         }
     }

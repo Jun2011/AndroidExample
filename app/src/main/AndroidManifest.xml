@@ -38,6 +38,7 @@
         <activity android:name=".bannerview.BannerViewActivity"/>
         <activity android:name=".imageslider.ImageSliderActivity"/>
         <activity android:name=".recyclerview.RecyclerViewActivity"/>
+        <activity android:name=".FloatingActionButton.FloatingActionButtonActivity"/>
     </application>
 
 </manifest>
