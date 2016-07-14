@@ -15,6 +15,7 @@ import com.jun.androidexample.imageslider.ImageSliderActivity;
 import com.jun.androidexample.parcelable.Parcelable_1;
 import com.jun.androidexample.pull.PullActivity;
 import com.jun.androidexample.qualifier.QualifierActivity;
+import com.jun.androidexample.recyclerview.RecyclerViewActivity;
 import com.jun.androidexample.sax.SaxActivity;
 import com.jun.androidexample.serializable.Serializable_1;
 import com.jun.androidexample.viewpager.ViewPagerActivity;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("ViewPager的使用");
         activityList.add("自定义BannerView图片轮播");
         activityList.add("使用AndroidImageSlider");
+        activityList.add("使用RecyclerView");
     }
 
     private void initViews() {
@@ -111,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 10:
                 ImageSliderActivity.launch(MainActivity.this);
+                break;
+            case 11:
+                RecyclerViewActivity.launch(MainActivity.this);
                 break;
         }
     }
