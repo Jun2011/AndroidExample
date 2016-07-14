@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.jun.androidexample.R;
+import com.orhanobut.logger.Logger;
 
 import java.util.List;
 
@@ -138,6 +139,8 @@ public class RecyclerViewAdapter extends
     // 更新数据
     public void updateData(List<NewsList> newsLists) {
 
+        Logger.d("updateData()");
+
         this.newsLists = newsLists;
 
         // 通知数据改变了
@@ -146,6 +149,8 @@ public class RecyclerViewAdapter extends
 
     // 添加数据
     public void addData(List<NewsList> newsLists) {
+
+        Logger.d("addData()");
 
         if (this.newsLists == null) {
 

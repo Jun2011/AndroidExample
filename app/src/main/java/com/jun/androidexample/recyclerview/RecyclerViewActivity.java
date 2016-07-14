@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.jun.androidexample.BaseActivity;
 import com.jun.androidexample.R;
+import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,8 @@ public class RecyclerViewActivity extends BaseActivity {
 
     private void initData() {
 
+        Logger.d("initData()");
+
         newsLists = new ArrayList<>();
 
         NewsList newsList1 = new NewsList();
@@ -90,6 +93,8 @@ public class RecyclerViewActivity extends BaseActivity {
 
     public void getData() {
 
+        Logger.d("getData()");
+
         NewsList newsList1 = new NewsList();
         newsList1.setImageUrl("http://pic2.zhimg.com/ded2566d08246dc9c41e04c5429d6b71.jpg");
         newsList1.setTitle("作为妇产科男医生，我来说说卫生棉条");
@@ -103,13 +108,14 @@ public class RecyclerViewActivity extends BaseActivity {
         newsList4.setImageUrl("http://pic1.zhimg.com/eb6f366b634cf0f1d1e69152be0f2ecc.jpg");
         newsList4.setTitle("这里是广告 · 月薪八千闺蜜聚会指南");
 
-        newsLists.add(newsList1);
-        newsLists.add(newsList2);
-        newsLists.add(newsList3);
-        newsLists.add(newsList4);
+        List<NewsList> getNewsLists = new ArrayList<>();
+        getNewsLists.add(newsList1);
+        getNewsLists.add(newsList2);
+        getNewsLists.add(newsList3);
+        getNewsLists.add(newsList4);
 
         // 添加数据
-        recyclerViewAdapter.addData(newsLists);
+        recyclerViewAdapter.addData(getNewsLists);
     }
 
     // 启动当前Activity
