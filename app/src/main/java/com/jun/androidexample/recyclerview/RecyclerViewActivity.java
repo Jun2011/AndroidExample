@@ -86,7 +86,9 @@ public class RecyclerViewActivity extends BaseActivity {
 
     private void initRecyclerView() {
 
+        // 设置Adapter
         recyclerView.setAdapter(recyclerViewAdapter);
+        // 设置成线性排列
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(RecyclerViewActivity.this));
     }

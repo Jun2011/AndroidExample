@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.jun.androidexample.R;
@@ -88,9 +89,7 @@ public class RecyclerViewAdapter extends
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-
-//        int layoutPosition = holder.getLayoutPosition();
+    public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
 
         if (position == 0) {
 
@@ -106,6 +105,15 @@ public class RecyclerViewAdapter extends
                     .into(holder.imageView);
             holder.normalTextView.setText(newsLists.get(position - 1).getTitle());
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(context, "position: " + position, Toast.LENGTH_SHORT)
+                        .show();
+            }
+        });
     }
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder {
