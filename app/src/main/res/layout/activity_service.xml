@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/start_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Service"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/stop_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Service"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/bind_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bind Service"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/unbind_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unbind Service"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/download_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Download Image"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/start_foreground_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Foreground Service"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/stop_foreground_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Foreground Service"
+        android:textAllCaps="false"/>
+</LinearLayout>

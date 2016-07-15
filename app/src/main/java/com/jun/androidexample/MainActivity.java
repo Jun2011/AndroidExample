@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.jun.androidexample.FloatingActionButton.FloatingActionButtonActivity;
+import com.jun.androidexample.activity.MessengerActivity;
+import com.jun.androidexample.activity.ServiceActivity;
 import com.jun.androidexample.bannerview.BannerViewActivity;
 import com.jun.androidexample.customview.CustomViewActivity;
 import com.jun.androidexample.customviewgroup.CustomViewGroupActivity;
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("使用AndroidImageSlider");
         activityList.add("使用RecyclerView");
         activityList.add("使用FloatingActionButton");
+        activityList.add("使用Service服务");
+        activityList.add("使用Messenger进行交互");
     }
 
     private void initViews() {
@@ -121,6 +125,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 12:
                 FloatingActionButtonActivity.launch(MainActivity.this);
+                break;
+            case 13:
+                ServiceActivity.launch(MainActivity.this);
+                break;
+            case 14:
+                MessengerActivity.launch(MainActivity.this);
                 break;
         }
     }
