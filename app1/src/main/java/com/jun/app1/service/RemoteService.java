@@ -7,9 +7,10 @@ import android.os.RemoteException;
 import android.support.annotation.Nullable;
 
 import com.jun.app1.IDog;
+import com.orhanobut.logger.Logger;
 
 /**
- * 远程服务
+ * 远程服务1
  */
 public class RemoteService extends Service {
 
@@ -33,5 +34,14 @@ public class RemoteService extends Service {
     public IBinder onBind(Intent intent) {
 
         return dogBinder;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        dogBinder = null;
+
+        Logger.i("解除绑定1");
     }
 }

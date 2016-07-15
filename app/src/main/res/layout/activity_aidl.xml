@@ -8,20 +8,41 @@
         android:id="@+id/bind_service_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bind Service"
+        android:text="绑定服务1"
         android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/unbind_service_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Unbind Service"
+        android:text="解除绑定1"
         android:textAllCaps="false"/>
 
     <Button
         android:id="@+id/get_data_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Remote Service Data"
+        android:text="调用远程服务的方法1"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/bind_service2_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绑定服务2"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/unbind_service2_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解除绑定2"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/invoke_method_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="调用远程服务的方法2"
         android:textAllCaps="false"/>
 </LinearLayout>
