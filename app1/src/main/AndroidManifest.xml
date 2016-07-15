@@ -28,6 +28,12 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </service>
+        <service android:name=".service.RemoteService3">
+            <intent-filter>
+                <action android:name="com.jun.app1.RemoteService3"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

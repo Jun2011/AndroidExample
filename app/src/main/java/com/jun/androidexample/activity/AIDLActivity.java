@@ -14,10 +14,13 @@ import android.widget.Toast;
 import com.jun.androidexample.BaseActivity;
 import com.jun.androidexample.R;
 import com.jun.app1.IBaseData;
+import com.jun.app1.ICustomData;
 import com.jun.app1.IDog;
+import com.jun.app1.model.Person;
 import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,9 +43,16 @@ public class AIDLActivity extends BaseActivity {
     Button unbindService2Button;
     @BindView(R.id.invoke_method_button2)
     Button invokeMethodButton2;
+    @BindView(R.id.bind_service3_button)
+    Button bindService3Button;
+    @BindView(R.id.unbind_service3_button)
+    Button unbindService3Button;
+    @BindView(R.id.invoke_method_button3)
+    Button invokeMethodButton3;
 
     private IDog iDog;
     private IBaseData iBaseData;
+    private ICustomData iCustomData;
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
@@ -50,7 +60,7 @@ public class AIDLActivity extends BaseActivity {
 
             Logger.i("成功绑定服务1");
 
-            // IDog.Stub.asInterface，获取接口。
+            // 拿到远程服务的代理
             iDog = IDog.Stub.asInterface(service);
         }
 
@@ -77,6 +87,22 @@ public class AIDLActivity extends BaseActivity {
         }
     };
 
+    private ServiceConnection serviceConnection3 = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+
+            Logger.i("成功绑定服务3");
+
+            iCustomData = ICustomData.Stub.asInterface(service);
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+            iCustomData = null;
+        }
+    };
+
     @Override
     public int getLayoutId() {
         return R.layout.activity_aidl;
@@ -94,7 +120,10 @@ public class AIDLActivity extends BaseActivity {
             R.id.get_data_button,
             R.id.bind_service2_button,
             R.id.unbind_service2_button,
-            R.id.invoke_method_button2})
+            R.id.invoke_method_button2,
+            R.id.bind_service3_button,
+            R.id.unbind_service3_button,
+            R.id.invoke_method_button3})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bind_service_button:
@@ -160,6 +189,37 @@ public class AIDLActivity extends BaseActivity {
                     }
                 } else {
                     Toast.makeText(AIDLActivity.this, "请先绑定服务2", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.bind_service3_button:
+
+                // 设置Intent目标是com.jun.app1包的RemoteService3
+                Intent intent3 = new Intent("com.jun.app1.RemoteService3");
+                intent3.setPackage("com.jun.app1");
+
+                bindService(intent3, serviceConnection3, BIND_AUTO_CREATE);
+                break;
+            case R.id.unbind_service3_button:
+
+                if (serviceConnection3 != null) {
+
+                    unbindService(serviceConnection3);
+
+                    iCustomData = null;
+                }
+                break;
+            case R.id.invoke_method_button3:
+
+                if (iCustomData != null) {
+
+                    try {
+                        List<Person> persons = iCustomData.add(new Person("Tom", 18));
+                        Logger.i(persons.toString());
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    Toast.makeText(AIDLActivity.this, "请先绑定服务3", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
