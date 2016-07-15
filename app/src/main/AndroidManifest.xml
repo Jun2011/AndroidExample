@@ -43,6 +43,7 @@
         <activity android:name=".activity.ForegroundActivity"/>
         <activity android:name=".activity.ServiceActivity"/>
         <activity android:name=".activity.MessengerActivity"/>
+        <activity android:name=".activity.AIDLActivity"/>
 
         <service android:name=".service.StartService"/>
         <service android:name=".service.BindService"/>
