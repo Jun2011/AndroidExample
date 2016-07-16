@@ -44,6 +44,7 @@
         <activity android:name=".activity.ServiceActivity"/>
         <activity android:name=".activity.MessengerActivity"/>
         <activity android:name=".activity.AIDLActivity"/>
+        <activity android:name=".activity.CoordinatorLayoutActivity"/>
 
         <service android:name=".service.StartService"/>
         <service android:name=".service.BindService"/>
