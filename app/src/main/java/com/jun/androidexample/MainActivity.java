@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.jun.androidexample.FloatingActionButton.FloatingActionButtonActivity;
 import com.jun.androidexample.activity.AIDLActivity;
+import com.jun.androidexample.activity.ChatActivity;
 import com.jun.androidexample.activity.CoordinatorLayoutActivity;
 import com.jun.androidexample.activity.HttpURLConnectionActivity;
 import com.jun.androidexample.activity.MessengerActivity;
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("使用CoordinatorLayout");
         activityList.add("使用HttpURLConnection");
         activityList.add("Socket通信");
+        activityList.add("Socket实例：简易聊天室");
     }
 
     private void initViews() {
@@ -151,6 +153,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 18:
                 SocketActivity.launch(MainActivity.this);
+                break;
+            case 19:
+                ChatActivity.launch(MainActivity.this);
                 break;
         }
     }
