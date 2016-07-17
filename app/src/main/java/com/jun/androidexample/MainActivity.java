@@ -13,6 +13,7 @@ import com.jun.androidexample.activity.CoordinatorLayoutActivity;
 import com.jun.androidexample.activity.HttpURLConnectionActivity;
 import com.jun.androidexample.activity.MessengerActivity;
 import com.jun.androidexample.activity.ServiceActivity;
+import com.jun.androidexample.activity.SocketActivity;
 import com.jun.androidexample.bannerview.BannerViewActivity;
 import com.jun.androidexample.customview.CustomViewActivity;
 import com.jun.androidexample.customviewgroup.CustomViewGroupActivity;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("使用AIDL");
         activityList.add("使用CoordinatorLayout");
         activityList.add("使用HttpURLConnection");
+        activityList.add("Socket通信");
     }
 
     private void initViews() {
@@ -146,6 +148,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 17:
                 HttpURLConnectionActivity.launch(MainActivity.this);
+                break;
+            case 18:
+                SocketActivity.launch(MainActivity.this);
                 break;
         }
     }

@@ -46,6 +46,7 @@
         <activity android:name=".activity.AIDLActivity"/>
         <activity android:name=".activity.CoordinatorLayoutActivity"/>
         <activity android:name=".activity.HttpURLConnectionActivity"/>
+        <activity android:name=".activity.SocketActivity"/>
 
         <service android:name=".service.StartService"/>
         <service android:name=".service.BindService"/>
