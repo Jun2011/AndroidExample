@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.jun.androidexample.FloatingActionButton.FloatingActionButtonActivity;
 import com.jun.androidexample.activity.AIDLActivity;
 import com.jun.androidexample.activity.CoordinatorLayoutActivity;
+import com.jun.androidexample.activity.HttpURLConnectionActivity;
 import com.jun.androidexample.activity.MessengerActivity;
 import com.jun.androidexample.activity.ServiceActivity;
 import com.jun.androidexample.bannerview.BannerViewActivity;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         activityList.add("使用Messenger进行交互");
         activityList.add("使用AIDL");
         activityList.add("使用CoordinatorLayout");
+        activityList.add("使用HttpURLConnection");
     }
 
     private void initViews() {
@@ -141,6 +143,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 16:
                 CoordinatorLayoutActivity.launch(MainActivity.this);
+                break;
+            case 17:
+                HttpURLConnectionActivity.launch(MainActivity.this);
                 break;
         }
     }
